@@ -1,0 +1,18 @@
+{
+	"name": "Go",
+	"dockerFile": "Dockerfile",
+	"appPort": 9000,
+	"extensions": [
+		"ms-vscode.go"
+	],
+	"runArgs": [
+		"--cap-add=SYS_PTRACE",
+		"--security-opt",
+		"seccomp=unconfined"
+	],
+	"settings": {
+		"go.gopath": "/go",
+		"http.proxyStrictSSL": false,
+		"http.proxy": "http://host.docker.internal:3128"
+	}
+}
